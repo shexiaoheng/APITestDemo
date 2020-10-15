@@ -1,0 +1,40 @@
+get_department:
+  method: post
+  url: https://qyapi.weixin.qq.com/cgi-bin/user/simplelist
+  params:
+    access_token: '$token'
+    department_id: '$department_id'
+
+get:
+  method: post
+  url: https://qyapi.weixin.qq.com/cgi-bin/user/get
+  params:
+    access_token: '$token'
+    userid: '$userid'
+
+add:
+  method: post
+  url: https://qyapi.weixin.qq.com/cgi-bin/user/create
+  params:
+    access_token: '$token'
+  json:
+    userid: '$userid'
+    name: '$name'
+    mobile: '$mobile'
+    department: '$department'
+
+update:
+  method: post
+  url: https://qyapi.weixin.qq.com/cgi-bin/user/update
+  params:
+    access_token: '$token'
+  json:
+    userid: '$userid'
+    name: '$name'
+
+delete:
+  method: get
+  url: https://qyapi.weixin.qq.com/cgi-bin/user/delete
+  params:
+    access_token: '$token'
+    userid: '$userid'
